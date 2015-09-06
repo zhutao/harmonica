@@ -9,12 +9,12 @@ from conf import REDISDB
 from conf import REDISPSW
 
 sys.path.append("../database")
-from database import redisBus
+#from database import redisBus
 
 from tornado.web import RequestHandler
 
 class BaseHandler(RequestHandler):
     def initialize(self):
         self.set_header('Server', 'JJ-ADjust-CallBack-Server')
-        self.rdb = redisBus(REDISIP, REDISPORT, REDISDB, REDISPSW)
+        #self.rdb = redisBus(REDISIP, REDISPORT, REDISDB, REDISPSW)
         
